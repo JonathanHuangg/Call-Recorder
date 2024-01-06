@@ -9,13 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        Button(action: {
+            print("made call")
+        }) {
+            ZStack {
+                Rectangle()
+                    .fill(Color(red: 0.91, green: 0.58, blue: 0.58))
+                    .frame(width: 200, height:50)
+                    .cornerRadius(10)
+                Text("Make Call")
+                    .foregroundStyle(.black)
+            }
         }
-        .padding()
+
     }
 }
 
